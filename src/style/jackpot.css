@@ -1,0 +1,192 @@
+.gameContainer .jackpotContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.gameContainer .jackpotContainer h2 {
+  width: 100%;
+  text-align: right;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.gameContainer .jackpotContainer .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+.gameContainer .jackpotContainer .circle .outline {
+  width: 300px;
+  height: 300px;
+  border: 5px dashed #fffdfa;
+  z-index: 2;
+  background-color: purple;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.gameContainer .jackpotContainer .circle .arrow {
+  font-size: 40px;
+  height: 100%;
+  -webkit-animation: rotate 4s infinite linear;
+          animation: rotate 4s infinite linear;
+  z-index: 3;
+}
+.gameContainer .jackpotContainer .circle .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.gameContainer .jackpotContainer .circle .pizza {
+  width: 375px;
+  height: 375px;
+  border-radius: 100%;
+  background: linear-gradient(45deg, lightblue 50%, blue 0%), linear-gradient(-45deg, green 50%, darkgreen 0%), linear-gradient(-45deg, yellowgreen 50%, yellow 0%), linear-gradient(45deg, tomato 50%, red 0%);
+  background-size: 50% 50%;
+  background-position: 0% 0%, 100% 0%, 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  z-index: -1;
+  display: grid;
+  grid-template-areas: "layer";
+  place-items: center;
+  border-radius: 50%;
+  --radius: 21vmin;
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
+}
+.gameContainer .jackpotContainer .circle .pizza .stat {
+  grid-area: layer;
+  width: 6vmin;
+  height: 6vmin;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: purple;
+  color: #185adb;
+  font-weight: bold;
+  font-size: 3vmin;
+  --d: calc(var(--i) / var(--total));
+  --r-offset: -0.25turn;
+  --r-amount: 1turn;
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  --transform: rotate(calc(var(--r) - 25deg)) translate(var(--radius))
+    rotate(calc(-1 * var(--r)));
+  transform: var(--transform);
+  transition: transform 1.5s ease-in-out;
+}
+.gameContainer .jackpotContainer .circle .pizza .stat img {
+  width: 100%;
+  border-radius: 50%;
+}
+.gameContainer .jackpotContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 6px 25px;
+  cursor: pointer;
+  background: #2f84fa;
+  color: #fffdfa;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-top: 150px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.blurContainer .container {
+  padding: 20px 40px;
+}
+.blurContainer .container ul.jackpot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.blurContainer .container ul.jackpot li {
+  width: 100%;
+  background: #491c7e;
+}
+.blurContainer .container ul.jackpot li img {
+  height: 100px;
+}
+.blurContainer .container ul.jackpot li .user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.blurContainer .container ul.jackpot li .user img {
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #3185ff;
+  background-color: #5C249F;
+}
+.blurContainer .container ul.jackpot li .user b {
+  opacity: 0.75;
+  margin-top: 10px;
+}
+.blurContainer .container ul.jackpot li .statsItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.blurContainer .container ul.jackpot li .statsItems b {
+  color: #febd01;
+}
+.blurContainer .container ul.jackpot li .statsItems div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.blurContainer .container ul.jackpot li .statsItems div img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 4px solid #5C249F;
+  background-color: #6f2cc0;
+  margin-left: -10%;
+}
+.blurContainer .container ul.jackpot li .keys {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+.blurContainer .container ul.jackpot li .keys span {
+  opacity: 0.75;
+  margin-top: 10px;
+}/*# sourceMappingURL=jackpot.css.map */

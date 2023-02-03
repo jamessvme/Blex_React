@@ -1,0 +1,8 @@
+.mainHeader ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeader ul li {
+  list-style: none;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,199 @@
+@import "variables";
+
+.gameContainer {
+  .jackpotContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    h2 {
+      width: 100%;
+      text-align: right;
+      opacity: 0.75;
+      cursor: pointer;
+    }
+    .circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      margin-top: 100px;
+      position: relative;
+      z-index: 2;
+      .outline {
+        width: 300px;
+        height: 300px;
+        border: 5px dashed #fffdfa;
+        z-index: 2;
+        background-color: purple;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+      .arrow {
+        font-size: 40px;
+        height: 100%;
+        animation: rotate 4s infinite linear;
+        z-index: 3;
+      }
+      .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+      .pizza {
+        width: 375px;
+        height: 375px;
+        border-radius: 100%;
+        background: linear-gradient(45deg, lightblue 50%, blue 0%),
+          linear-gradient(-45deg, green 50%, darkgreen 0%),
+          linear-gradient(-45deg, yellowgreen 50%, yellow 0%),
+          linear-gradient(45deg, tomato 50%, red 0%);
+        background-size: 50% 50%;
+        background-position: 0% 0%, 100% 0%, 0 100%, 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(25deg);
+        z-index: -1;
+        display: grid;
+        grid-template-areas: "layer";
+        place-items: center;
+        border-radius: 50%;
+        --radius: 21vmin;
+        width: calc(2 * var(--radius));
+        height: calc(2 * var(--radius));
+        .stat {
+          grid-area: layer;
+          width: 6vmin;
+          height: 6vmin;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background-color: purple;
+          color: #185adb;
+          font-weight: bold;
+          font-size: 3vmin;
+
+          // Decimal value, 0-1 based on the child's index.
+          --d: calc(var(--i) / var(--total));
+          // Offset to get better starting placement on the circle
+          --r-offset: -0.25turn;
+          // Full circle
+          --r-amount: 1turn;
+          // Rotation based on the decimal and r modifiers
+          --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+          // Rotate, transform out, then negative rotation so the content appears upright
+          --transform: rotate(calc(var(--r) - 25deg)) translate(var(--radius))
+            rotate(calc(-1 * var(--r)));
+
+          transform: var(--transform);
+          transition: transform 1.5s ease-in-out;
+          //transition-delay: calc(0.1s * var(--i));
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      padding: 6px 25px;
+      cursor: pointer;
+      background: #2f84fa;
+      color: #fffdfa;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      margin-top: 150px;
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blurContainer {
+  .container {
+    padding: 20px 40px;
+    ul.jackpot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      li {
+        width: 100%;
+        background: darken($primary-color, 8%);
+        img {
+          height: 100px;
+        }
+        .user {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          img {
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid #3185ff;
+            background-color: $primary-color;
+          }
+          b {
+            opacity: 0.75;
+            margin-top: 10px;
+          }
+        }
+        .statsItems {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          b {
+            color: #febd01;
+          }
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            img {
+              border-radius: 50%;
+              height: 70px;
+              width: 70px;
+              border: 4px solid $primary-color;
+              background-color: lighten($primary-color, 8%);
+              margin-left: -10%;
+            }
+          }
+        }
+        .keys {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-size: 20px;
+          span {
+            opacity: 0.75;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

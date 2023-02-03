@@ -1,0 +1,80 @@
+@import "variables";
+
+.mainHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 12px 15px;
+  nav {
+    img {
+      height: 55px;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    a {
+      text-decoration: none;
+      margin: 0 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: darken(#fff, 15%);
+      display: block;
+      height: 100%;
+      font-size: 32px;
+      transition: .2s;
+      &:hover {
+        transition: .2s;
+        transform: scale(1.1);
+        color: #fff;
+      }
+    }
+  }
+  button {
+    border: none;
+    background-color: royalblue;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    &.inv {
+      margin: 0 20px;
+      margin-left: 0;
+    }
+  }
+  .user {
+    img {
+      height: 79px;
+      border-radius: 50%;
+    }
+    span {
+      color: #fff;
+    }
+    svg {
+      color: #fff;
+      font-size: 23px;
+      transform: scale(1);
+      transition: .2s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.15);
+        transition: .2s;
+      }
+    }
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,10 @@
+.blurContainer .container h1 {
+  letter-spacing: 1px;
+}
+.blurContainer .container .document {
+  color: #fffdfa;
+}
+.blurContainer .container .document h2 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=docs.css.map */

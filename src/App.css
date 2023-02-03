@@ -1,0 +1,303 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.back {
+  position: absolute;
+  width: 304.56px;
+  height: 276.1px;
+  right: 10px;
+  bottom: 120px;
+  z-index: -10;
+  background: #55EBFF;
+  filter: blur(314px);
+  transform: rotate(-1.71deg);
+}
+.back1 {
+  /* position: absolute; */
+  width: 1330px;
+  height: 172px;
+  left: -697px;
+  top: 128px;
+  
+  background: rgba(135, 0, 184, 0.82);
+  filter: blur(215.5px);
+}
+.background_color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  background: #0D101D;
+}
+.backTopRight {
+  position: absolute;
+  width: 86%;
+  height: 12.6vh;
+  /* right: 63%; */
+  top: -4%;
+  background: #2FA1F3;
+  opacity: 0.1;
+  filter: blur(144.733px);
+}
+.backMaskRight {
+  position: absolute;
+  width: 15.6%;
+  height: 20%;
+  right: 10px;
+  top: 56.4%;
+  background: #55EBFF;
+  filter: blur(314px);
+  transform: rotate(-1.71deg);
+}
+.backMaskleft {
+  position: absolute;
+  width: 80%;
+  height: 12.6vh;
+  left: -35.8%;
+  top: 9.4%;
+  background: rgba(135, 0, 184, 0.82);
+  filter: blur(215.5px);
+}
+.backMask {
+  position: fixed;
+  width: 107%;
+  height: 87vh;
+  left: 0.4%;
+  top: 3%;
+  /* background: rgba(24, 28, 51, 0.31); */
+}
+.gameBox {
+  background: linear-gradient(180deg, rgba(152, 119, 254, 0.12) 0%, rgba(135, 0, 184, 0) 90.52%);
+  box-shadow: 0px 3.11253px 3.89067px -1.55627px rgba(0, 0, 0, 0.25);
+  border-radius: 54px;
+}
+.article {
+  background: #181E38;
+  padding-left: 50px;
+  padding-right: 71px;
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+.article h1 {
+  font-family: 'Rubik Mono One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+}
+.article p {
+  font-family: 'Noto Music';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+  margin-top: 60px;
+  color: #FFFFFF;
+}
+.about_special {
+  width: 100%;
+  left: 0px;
+  top: 1219px;
+  padding-top: 28px;
+  padding-bottom: 68px;
+  margin-top: 42px;
+  background: linear-gradient(180deg, #101526 14.58%, #05070F 100%);
+
+}
+.about_special .article {
+  background: #181E38;
+  margin-top: 28px;
+  margin-left: 503px;
+  margin-right: 496px;
+}
+
+.stats_back1 {
+  position: absolute;
+  width: 100%;
+  height: 903px;
+  left: 0px;
+  top: 0px;
+  background: #0D101D;
+}
+.stats_back2 {
+  position: absolute;
+  width: 65%;
+  height: 133px;
+  left: -33%;
+  top: 100px;
+  /* z-index: 10; */
+  background: rgba(135, 0, 184, 0.82);
+  filter: blur(167.688px);
+}
+.stats_back3 {
+  position: absolute;
+  width: 239px;
+  height: 225px;
+  left: 87%;
+  top: 321px;
+  z-index: 10;
+  background: #C420FF;
+  filter: blur(175px);
+}
+.stats_back4 {
+  position: absolute;
+  width: 242px;
+  height: 215px;
+  left: -48px;
+  top: 777px;
+  z-index: 10;
+  background: #4093F4;
+  filter: blur(175px);
+}
+.stats_back5 {
+  position: absolute;
+  width: 242px;
+  height: 215px;
+  left: 24px;
+  top: 385px;
+  background: #2FA1F3;
+  z-index: 10;
+  filter: blur(175px);
+}
+.stats_back6 {
+  position: absolute;
+  visibility: hidden;
+  width: 1494px;
+  height: 735px;
+  left: 0px;
+  top: 98px;
+  z-index: 10;
+  background: rgba(152, 119, 254, 0.13);
+}
+.stats_back7 {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  left: 674px;
+  top: 361px;
+  z-index: 10;
+  background: linear-gradient(243.99deg, #C846F7 -5.29%, #349FF3 121.18%);
+  filter: blur(175px);
+}
+.stats_back7 {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  left: 674px;
+  top: 361px;
+  z-index: 10;
+  background: linear-gradient(243.99deg, #C846F7 -5.29%, #349FF3 121.18%);
+  filter: blur(175px);
+}
+.stats_content_back {
+  /* position: absolute; */
+  width: 99%;
+  left: 0px;
+  /* z-index: -1; */
+  top: 98px;
+  background: rgba(14, 18, 34, 0.96);
+  backdrop-filter: blur(97.5px);
+}
+.stats_user_back{
+  height: 61px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), rgba(105, 130, 199, 0.54);
+  border-radius: 50px;
+}
+.bg-game-history {
+  height: 68px;
+  background: linear-gradient(180deg, #0D1220 0%, #886CE5 375.74%);
+  border-radius: 26px;
+}
+.bg-user-item {
+  background: #243052;
+  box-shadow: -1px 6px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.bg-user-item1 {
+  background: #D9D9D9;
+  box-shadow: -1px 6px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.bg-game-history1 {
+  height: 68px;
+  background: linear-gradient(180deg, #0D1220 0%, #EA5757 180%);
+  border-radius: 26px;
+}
+.create-clip {
+  position: fixed;
+  width: 87%;
+  height: 597px;
+  left: 88px;
+  top: 150px;
+  background: linear-gradient(180deg, rgba(72, 57, 105, 0.22) 45.21%, rgba(72, 57, 105, 0) 100%);
+  backdrop-filter: blur(20.5px);
+  border-radius: 6px;
+}
+.create-flip-bottom {
+  width: 60%;
+  height: 50px;
+  margin: 0 auto;
+  background: #181C33;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 29px;
+}
+.bg-your-items {
+  background: #0D111D;
+  box-shadow: -13px 8px 19px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+.bg-footer {
+  background: linear-gradient(180deg, rgba(14, 13, 18, 0) 0%, #0E0D12 10.42%);
+}
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* header */

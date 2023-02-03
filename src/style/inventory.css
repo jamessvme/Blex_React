@@ -1,0 +1,72 @@
+.inventory {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.inventory button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 6px 25px;
+  cursor: pointer;
+  background: #2f84fa;
+  color: #fffdfa;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 10px;
+}
+.inventory div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.inventory div div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  max-height: 500px;
+}
+.inventory div div h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.inventory div div ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  min-height: 132px;
+  overflow-y: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+.inventory div div ul li {
+  margin: 5px;
+  list-style: none;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.inventory div div ul li img {
+  width: 100px;
+  border-radius: 50%;
+}
+.inventory div div ul li.added {
+  border: 2px solid green;
+}
+.inventory div div ul li.block {
+  cursor: not-allowed;
+}/*# sourceMappingURL=inventory.css.map */

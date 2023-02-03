@@ -1,0 +1,163 @@
+.gameCardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  max-width: 1100px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  // background-color: darken(rgba(255, 255, 255, 0.4), 12%);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
+  padding-top: 0px;
+  .waviy {
+    width: 100%;
+    position: relative;
+    // -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    font-size: 50px;
+    padding: 15px;
+    color: #FFFDFA;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: waviy 1.2s infinite;
+    animation-delay: calc(0.1s * var(--i));
+    font-weight: bold;
+    font-family: "Bebas Neue", cursive;
+    margin: 0 3px;
+  }
+  @keyframes waviy {
+    0%,
+    40%,
+    100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-20px);
+    }
+  }
+  .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ddbe23;
+      background: -webkit-linear-gradient(top left, #ddbe23, #fcef99);
+      background: -moz-linear-gradient(top left, #ddbe23, #fcef99);
+      background: linear-gradient(to bottom right, #ddbe23, #fcef99);
+      clip-path: circle(150px at 80% 20%);
+      transition: 0.5s ease-in-out;
+    }
+    &:nth-child(3)::before {
+      background: #e02743;
+      background: -webkit-linear-gradient(top left, #e02743, #a82a42);
+      background: -moz-linear-gradient(top left, #e02743, #a82a42);
+      background: linear-gradient(to bottom right, #e02743, #a82a42);
+    }
+    &:nth-child(4)::before {
+      background: #0ba3aa;
+      background: -webkit-linear-gradient(top left, #0ba3aa, #3939d6);
+      background: -moz-linear-gradient(top left, #0ba3aa, #3939d6);
+      background: linear-gradient(to bottom right, #0ba3aa, #3939d6);
+    }
+    &:hover::before {
+      clip-path: circle(300px at 80% -20%);
+    }
+    &::after {
+      content: "Coinflip";
+      position: absolute;
+      top: 70%;
+      left: 4%;
+      font-size: 80px;
+      font-weight: 800;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    &:nth-child(3)::after {
+      content: "Jackpot";
+      left: 1%;
+    }
+    &:nth-child(4)::after {
+      content: "Rock \a Paper \a Scissors";
+      white-space: pre;
+      left: 22.5%;
+      top: 55%;
+      font-size: 50px;
+    }
+    .imgBx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+      width: 100%;
+      height: 220px;
+      transition: 0.5s;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-25deg);
+        width: 270px;
+      }
+    }
+    &:hover {
+      .imgBx {
+        top: 0%;
+        transform: translateY(0%);
+      }
+      .contentBx {
+        height: 210px;
+        a {
+          opacity: 1;
+          transform: translateY(0px);
+          transition-delay: 0.35s;
+        }
+      }
+    }
+    .contentBx {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      transition: 0.8s;
+      z-index: 2;
+      h2 {
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #111;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 0.5s;
+      }
+    }
+  }
+}
